@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | Vidya Sagarika</title>
+  <link rel="stylesheet" href="styl.css"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <h1>Vidya Sagarika</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/resume.pdf" download>Download CV</a></li>
+    </ul>
+  </nav>
+
+ <section class="about-card">
+  <img src="assets/min.png" alt="Profile Photo" class="profile-img-circle" />
+  <div class="about-text">
+    <h2>Hello, I'm G. Vidya Sagarika 👋</h2>
+    <p>I’m a passionate web developer and tech enthusiast currently interning at ApexPlanet Software Pvt. Ltd. I love building responsive and user-friendly websites using HTML, CSS, and JavaScript.</p>
+    <p>I'm also exploring new technologies like Generative AI, NLP, and Android app development. I enjoy turning ideas into real projects and aim to grow into a full-stack developer while contributing meaningfully to the tech community.</p>
+  </div>
+</section>
+</body>
+</html>
+
+
+styl.css
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  color: #333;
+}
+
+/* Navigation */
+nav {
+  background-color: #004080;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav h1 {
+  font-size: 1.5rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* About Section */
+.about-card {
+  display: flex;
+  flex-direction: column;  /* ✅ Stack vertically */
+  align-items: center;
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.project-img {
+  width: 220px;          /* You can make it 180px if too large */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-img-circle {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #004080;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  max-width: 550px;
+}
+.about-text h2 {
+  color: #004080;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.languages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.language-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  width: 120px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.language-card:hover {
+  transform: translateY(-5px);
+}
+
+.language-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+.language-card p {
+  font-weight: bold;
+  color: #004080;
+}
+.certificate-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.certificate-card {
+  background-color: white;
+  width: 250px;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+}
+
+.certificate-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.certificate-card p {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+@media (max-width: 768px) {
+  .certificate-card {
+    width: 90%;
+  }
+}
+.contact-section {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+  min-height: 100vh;
+}
+
+.contact-card {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm input,
+#contactForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#contactForm button {
+  padding: 10px 20px;
+  background-color: #004080;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button:hover {
+  background-color: #0066cc;
+}
+
+.social-links {
+  margin-top: 2rem;
+}
+
+.social-links a {
+  display: block;
+  margin: 0.5rem 0;
+  color: #004080;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.social-links a i {
+  margin-right: 10px;
+}
+
+
+projects.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Vidya Sagarika</title>
+  <link rel="stylesheet" href="styl.css"/>
+</head>
+<body>
+  <nav>
+    <h1>Vidya Sagarika</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/resume.pdf" download>Download CV</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <h3>To-Do List App</h3>
+      <img src="assets/todo1.jpeg" alt="To-Do App" class="project-img" />
+      <img src="assets/todo2.jpeg" alt="To-Do App" class="project-img" />
+      <p>A simple JS-based task manager using local storage.</p>
+    </div>
+    <div class="project-card">
+      <h3>Product Listing</h3>
+      <img src="assets/pro1.jpeg" alt="Portfolio" class="project-img" />
+      <img src="assets/pro2.jpeg" alt="Portfolio" class="project-img" />
+      <img src="assets/pro3.jpeg" alt="Portfolio" class="project-img" />
+      <p>This product page consists of various products with different categories.</p>
+    </div>
+    <div class="project-card">
+      <h3>Customer Churn Prediction</h3>
+      <img src="assets/churn1.jpeg" alt="Customer churn" class="project-img" />
+      <img src="assets/churn2.jpeg" alt="Customer churn" class="project-img" />
+      <p>Representing Customer churning rate by using graphs.</p>
+    </div>
+
+  </section>
+</body>
+</html>
+
+contact.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Vidya Sagarika</title>
+  <link rel="stylesheet" href="styl.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav>
+    <h1>Vidya Sagarika</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/resume.pdf" download>Download CV</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-card">
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="social-links">
+        <h3>Connect with me</h3>
+        <a href="https://www.linkedin.com/in/vidya-sagarika-gollapalli-6872a6257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/vidyasagarika" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent.");
+    });
+  </script>
+</body>
+</html>
+
+languages.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Languages | Vidya Sagarika</title>
+  <link rel="stylesheet" href="styl.css" />
+</head>
+<body>
+  <nav>
+    <h1>Vidya Sagarika</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/resume.pdf" download>Download CV</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Languages I Use</h2>
+    <div class="languages-grid">
+      <div class="language-card">
+        <img src="assets/html.png" alt="HTML" />
+        <p>HTML</p>
+      </div>
+      
+      <div class="language-card">
+        <img src="assets/css.png" alt="CSS" />
+        <p>CSS</p>
+      </div>
+      <div class="language-card">
+        <img src="assets/js.png" alt="JavaScript" />
+        <p>JavaScript</p>
+      </div>
+      <div class="language-card">
+        <img src="assets/java.png" alt="Java" />
+        <p>Java</p>
+      </div>
+      <div class="language-card">
+        <img src="assets/python.png" alt="Python" />
+        <p>Python</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
+courses.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses | Vidya Sagarika</title>
+  <link rel="stylesheet" href="styl.css"/>
+</head>
+<body>
+  <nav>
+    <h1>Vidya Sagarika</h1>
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="languages.html">Languages</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/resume.pdf" download>Download CV</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Courses & Certifications</h2>
+    <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="assets/intern.jpeg" alt="Android Developer" />
+        <p>Android Developer internship </p>
+      </div>
+      <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="assets/codsoft.jpg" alt="codsoft" />
+        <p>codsoft internship </p>
+      </div>
+      <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="assets/IBM.jpeg" alt="IBM" />
+        <p>IBM learning certificate </p>
+      </div>
+      <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="assets/IBM2.jpeg" alt="IBM" />
+        <p>IBM learning certificate</p>
+      </div>
+      <div class="certificate-grid">
+      <div class="certificate-card">
+        <img src="assets/Davidson.jpeg" alt="Davidson" />
+        <p>Davidson learning certificate</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cisco1.jpg" alt="Android" />
+        <p>Python Essentials</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cisco2.jpg" alt="Python Essentials" />
+        <p>cisco learning certificate</p>
+      </div>
+      <div class="certificate-card">
+        <img src="assets/cisco3.jpg" alt="Cisco Certificate" />
+        <p>Cisco Learning Certificate</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
